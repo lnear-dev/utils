@@ -1,0 +1,31 @@
+{
+  "name": "@lnear/utils",
+  "private": false,
+  "version": "1.0.1",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/lnear-utils.js",
+  "typings": "./dist/lnear-utils.d.ts",
+  "module": "./dist/lnear-utils.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lnear-utils.js",
+      "require": "./dist/lnear-utils.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1"
+  }
+}
+

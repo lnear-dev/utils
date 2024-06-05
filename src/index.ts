@@ -14,9 +14,9 @@ export function when(
   return expression ? trueValue() : falseValue ? falseValue() : undefined;
 }
 
-export { waitUntil, debounce, setAbortableTimeout } from "./async.js";
-export { media } from "./media.js";
-export * from "./log.js";
-export * from "./async.js";
-export * from "./CONSTANTS.js";
-export { createService } from "./Service.js";
+export { waitUntil, debounce, setAbortableTimeout } from "./async";
+export { media } from "./media";
+export * from "./log";
+export * from "./async";
+export * from "./CONSTANTS";
+export { createService } from "./Service";

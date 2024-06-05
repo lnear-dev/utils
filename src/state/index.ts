@@ -14,22 +14,22 @@ export class StateChangedEvent extends Event {
 }
 
 export class State extends EventTarget {
-  #state: any;
+  private state: any;
 
   constructor(initialState: {}) {
     super();
-    this.#state = initialState;
+    this.state = initialState;
   }
 
   setState(state: (arg0: any) => any) {
-    log("Before: ", this.#state);
-    this.#state = typeof state === "function" ? state?.(this.#state) : state;
-    log("After: ", this.#state);
-    this.dispatchEvent(new StateChangedEvent(this.#state));
+    log("Before: ", this.state);
+    this.state = typeof state === "function" ? state?.(this.state) : state;
+    log("After: ", this.state);
+    this.dispatchEvent(new StateChangedEvent(this.state));
   }
 
   getState() {
-    return this.#state;
+    return this.state;
   }
 }
 
